@@ -1,8 +1,8 @@
 package Aplicacao;
 
 import java.util.List;
+import ModeloLivro.Livro;
 
-import Modelo.Livro;
 
 public interface CRUD {
 

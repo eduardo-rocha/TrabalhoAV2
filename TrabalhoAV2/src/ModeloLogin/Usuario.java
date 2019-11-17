@@ -1,4 +1,4 @@
-package Modelo;
+package ModeloLogin;
 
 public class Usuario extends Pessoa {
 

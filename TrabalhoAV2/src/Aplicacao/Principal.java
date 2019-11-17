@@ -1,8 +1,7 @@
 package Aplicacao;
 
 import java.util.List;
-
-import Modelo.Livro;
+import ModeloLivro.Livro;
 
 public class Principal implements CRUD {
 
