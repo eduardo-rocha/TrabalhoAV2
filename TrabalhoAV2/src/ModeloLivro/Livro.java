@@ -2,13 +2,15 @@ package ModeloLivro;
 
 public class Livro {
 
+	private int codigo;
 	private String nome;
 	private String Autor;
 	private String editora;
 	private int anoDeLancamento;
 	
-	public Livro(String nome, String autor, String editora, int anoDeLancamento) {
+	public Livro(int codigo, String nome, String autor, String editora, int anoDeLancamento) {
 		super();
+		this.codigo = codigo;
 		this.nome = nome;
 		Autor = autor;
 		this.editora = editora;
@@ -39,11 +41,17 @@ public class Livro {
 	public void setAnoDeLancamento(int anoDeLancamento) {
 		this.anoDeLancamento = anoDeLancamento;
 	}
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
 
 	@Override
 	public String toString() {
-		return "nome: " + nome + ", Autor: " + Autor + ", editora: " + editora + ", Ano de Lançamento:"
+		return "Nome: " + nome + ", Autor: " + Autor + ", Editora: " + editora + ", Ano de Lançamento: "
 				+ anoDeLancamento;
 	}
-	
 }

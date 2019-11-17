@@ -2,15 +2,12 @@ package ModeloLivro;
 
 public class Academico extends Livro {
 
-	public Academico(String nome, String autor, String editora, int anoDeLancamento) {
-		super(nome, autor, editora, anoDeLancamento);
+	public Academico(int codigo, String nome, String autor, String editora, int anoDeLancamento) {
+		super(codigo, nome, autor, editora, anoDeLancamento);
 	}
 
 	@Override
 	public String toString() {
-		return "Academico: " + super.toString();
+		return "\nAcademico: \n" + super.toString();
 	}
-
-
-	
 }
