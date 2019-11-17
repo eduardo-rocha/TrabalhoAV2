@@ -4,14 +4,16 @@ public class Pessoa {
 
 	private String nome;
 	private String cpf;
-	private int idade;
+	private String login;
+	private int senha;
 	private Permissao permissao;
 	
-	public Pessoa(String nome, String cpf, int idade, Permissao permissao) {
+	public Pessoa(String nome, String cpf, String login, int senha, Permissao permissao) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
-		this.idade = idade;
+		this.setLogin(login);
+		this.senha = senha;
 		this.permissao = permissao;
 	}
 
@@ -31,12 +33,12 @@ public class Pessoa {
 		this.cpf = cpf;
 	}
 
-	public int getIdade() {
-		return idade;
+	public int getSenha() {
+		return senha;
 	}
 
-	public void setIdade(int idade) {
-		this.idade = idade;
+	public void setSenha(int senha) {
+		this.senha = senha;
 	}
 
 	public Permissao getPermissao() {
@@ -45,6 +47,14 @@ public class Pessoa {
 
 	public void setPermissao(Permissao permissao) {
 		this.permissao = permissao;
+	}
+
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
 	}
 	
 	
