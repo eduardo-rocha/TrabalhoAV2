@@ -43,10 +43,9 @@ public class Principal{
 				else if (menu.opcao == 2) {
 					lista.add(Menu.lerDados(lista));
 				} else if (menu.opcao == 3) {
-					Livro livro = Menu.lerDados(lista);
-					menu.alterar(lista, livro);
+					lista = menu.alterar(lista);
 				} else if (menu.opcao == 4)
-					menu.excluir(lista);
+					lista = menu.excluir(lista);
 			}
 		}
 	}

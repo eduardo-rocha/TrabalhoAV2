@@ -36,10 +36,6 @@ public class Menu implements CRUD {
 		return null;
 	}
 	
-	
-	
-	
-	
 	public int menu(Admin admin) {
 
 		System.out.println("--------------------------");
@@ -59,6 +55,7 @@ public class Menu implements CRUD {
 		
 	return opcao;
 	}
+	
 	public int menu(Usuario usuario) {
 
 		System.out.println("--------------------------");
@@ -68,7 +65,7 @@ public class Menu implements CRUD {
 
 		opcao = leitor.nextInt();
 
-		if (opcao == 1 && usuario.getPermissao() == Permissao.PARCIAL)
+		if (opcao == 1 || opcao == 0 && usuario.getPermissao() == Permissao.PARCIAL)
 			System.out.println("Autorizado");
 		else
 			System.out.println("Opcao inválida!");
@@ -84,17 +81,27 @@ public class Menu implements CRUD {
 		
 		lista.forEach(livro -> System.out.println(livro.toString()));
 		
-		System.out.println("--------------------------------------------------------");
 	}
 
 	@Override
 	public List<Livro> excluir(List<Livro> lista) {
-		// TODO Auto-generated method stub
+		System.out.print("Digite o código do Livro a ser excluído: ");
+		int cod = leitor.nextInt();
+
+		boolean chave = true;
+		for (int i = 0; i < lista.size() && chave; i++) {
+			if (lista.get(i).getCodigo() == cod) {
+				lista.remove(i);
+				chave = !chave;
+			} else if (i >= lista.size())
+				System.out.println("\nEsse livro não existe no catálogo!");
+		}
+		
 		return lista;
 	}
 
 	@Override
-	public List<Livro> alterar(List<Livro> lista, Livro livro) {
+	public List<Livro> alterar(List<Livro> lista) {
 		// TODO Auto-generated method stub
 		return lista;
 	}
