@@ -12,7 +12,7 @@ public class Pessoa {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
-		this.setLogin(login);
+		this.login = login;
 		this.senha = senha;
 		this.permissao = permissao;
 	}

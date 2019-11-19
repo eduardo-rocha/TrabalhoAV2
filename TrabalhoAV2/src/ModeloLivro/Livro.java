@@ -45,7 +45,7 @@ public class Livro {
 		return codigo;
 	}
 
-	public void setCodigo(int codigo) {
+	private void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
 
